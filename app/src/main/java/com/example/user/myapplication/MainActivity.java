@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+//    Объявление переменных
+
     EditText input1;
     EditText input2;
     Button btn;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        Инициализация переменных полей
         input1 = (EditText) findViewById(R.id.input);
         input2 = (EditText) findViewById(R.id.input2);
         output = (TextView) findViewById(R.id.output);
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn.setOnClickListener(this);
     }
 
+//    Метод реакции нажатия на кнопку
     @Override
     public void onClick(View view) {
         String s = input1.getText().toString();
