@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn = (Button) findViewById(R.id.button);
         btn.setOnClickListener(this);
     }
-    
+
 
 //    Метод реакции нажатия на кнопку
     @Override
