@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText input1;
     EditText input2;
@@ -23,18 +23,15 @@ public class MainActivity extends AppCompatActivity {
         input2 = (EditText) findViewById(R.id.input2);
         output = (TextView) findViewById(R.id.output);
         btn = (Button) findViewById(R.id.button);
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String s = input1.getText().toString();
-                String s2 = input2.getText().toString();
-                int x = Integer.parseInt(s);
-                int x2 = Integer.parseInt(s2);
-                output.setText(String.valueOf(x + x2));
-            }
-        });
-
+        btn.setOnClickListener(this);
     }
 
+    @Override
+    public void onClick(View view) {
+        String s = input1.getText().toString();
+        String s2 = input2.getText().toString();
+        int x = Integer.parseInt(s);
+        int x2 = Integer.parseInt(s2);
+        output.setText(String.valueOf(x + x2));
+    }
 }
